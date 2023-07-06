@@ -1,8 +1,7 @@
 from mininet.net import Mininet
-from mininet.node import RemoteController, OVSKernelSwitch
-from mininet.link import TCLink
+from mininet.node import RemoteController
 from mininet.cli import CLI
-from mininet.log import setLogLevel, info
+from mininet.log import setLogLevel
 from mininet.topo import Topo
 
 class MyTopo(Topo):
@@ -22,20 +21,14 @@ class MyTopo(Topo):
             self.hosts_l.append(host)
             self.switches_l.append(switch)
             self.addLink(switch, host, bw=1000, delay='1ms')
-            #self.addLink(host, switch, bw=1000, delay='1ms')
-
         for s_link, t_link in self.switches_links:
             self.addLink(self.switches_l[s_link - 1], self.switches_l[t_link - 1], bw=1000, delay='1ms')
-            #self.addLink(self.switches_l[t_link - 1], self.switches_l[s_link - 1], bw=1000, delay='1ms')
-
 
 setLogLevel('info')
 topology = MyTopo()
 net = Mininet(
     topo=topology,
-    controller=RemoteController,
-    ipBase="127.0.0.1", 
-    listenPort=6653
+    controller=RemoteController('c1', '127.0.0.1')
 )
 net.start()
 CLI(net)
