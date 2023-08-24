@@ -1,0 +1,68 @@
+.uniinform {
+  font-family: Tahoma;
+  font-size: 18px; 
+}
+
+.god {
+  font-family: Vazir;
+  font-size: 32px;
+}
+
+.mainSubj {
+  font-family: Vazir;
+  color: #007bff;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.notebookSubj {
+  font-family: Vazir;
+  color: #dc3545;
+  font-size: 38px;
+}
+
+.authors {
+  font-family: Tahoma;
+  font-size: 14px;
+}
+
+.header {
+  direction: rtl; 
+  text-align: center;
+}
+
+.toc {
+    background: #f9f9f9;
+    border: 1px solid #aaa;
+    padding: 10px; 
+}
+  
+.toc-title {
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+  
+.toc a {
+    color: #0077cc;
+}
+  
+.header h1 { 
+    font-size: 32px;
+    font-weight: bold; 
+    background: #333; 
+    color: #fff; 
+    padding: 10px; 
+    text-align: center; 
+}
+
+.body-txt {
+    font-family: "XB Zar"; 
+    size:18px;
+}
+
+.formula {
+    background-color: #f5f5f5;
+    padding: 10px;
+  } 
